@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detection</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            background:#f4f4f4;
+            padding:50px;
+        }
+
+        .container{
+            background:white;
+            width:70%;
+            margin:auto;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        textarea{
+            width:90%;
+            height:200px;
+            padding:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            font-size:18px;
+        }
+
+        h1{
+            color:#333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📰 Fake News Detection System</h1>
+
+<form action="/predict" method="post">
+
+<textarea
+name="news"
+placeholder="Paste news article here..."
+required></textarea>
+
+<br><br>
+
+<button type="submit">
+Check News
+</button>
+
+</form>
+
+<h2>{{ prediction_text }}</h2>
+
+</div>
+
+</body>
+</html>
